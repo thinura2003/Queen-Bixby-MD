@@ -17,7 +17,7 @@ const primbon = new Primbon()
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 const nexusnw = require('xfarr-api')
 //Jsl Api Keys
-const setting = JSON.parse(fs.readFileSync('./apikey.json'))
+let  setting = JSON.parse(fs.readFileSync('./apikey.json'))
 //rpg function\\
    const { 
      addInventoriDarah, 
@@ -3370,7 +3370,11 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `╭─⎝ ☕ Qᴜᴇᴇɴ ʙɪxʙʏ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ ☕ ⎠──\n\n │💻.  Bot Name : ${global.botname}\n│💻. Owner Name : ${global.ownername}\n│💻.  Plat Form : ${os.platform()}\n│💻.  Runtime : ${runtime(process.uptime())}\n\n╰────────────────── \n\n`,
+                    description: `╭─⎝ ☕ Qᴜᴇᴇɴ ʙɪxʙʏ-ᴍᴅ ᴇᴅɪᴛɪᴏɴ ☕ ⎠──\n\n │💻.  Bot Name : ${global.botname}
+\n│💻. Owner Name : ${global.ownername}
+\n│💻.  Plat Form : ${os.platform()}
+\n│💻.  Runtime : ${runtime(process.uptime())}\n\n╰──────────────────
+ \n\n`,
                     buttonText: "SELECT ",
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",
