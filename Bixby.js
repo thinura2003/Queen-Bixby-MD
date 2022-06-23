@@ -17,7 +17,8 @@ const primbon = new Primbon()
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 const nexusnw = require('xfarr-api')
 //Jsl Api Keys
-let  setting = JSON.parse(fs.readFileSync('./apikey.json'))
+
+const  apikey = JSON.parse(fs.readFileSync('./apikey.json'))
 //rpg function\\
    const { 
      addInventoriDarah, 
